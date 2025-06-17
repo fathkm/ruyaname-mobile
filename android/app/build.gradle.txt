@@ -1,0 +1,45 @@
+apply plugin: "com.android.application"
+apply plugin: "com.facebook.react"
+apply plugin: "org.jetbrains.kotlin.android"
+
+android {
+    namespace "com.ruyanameSonMobile"
+    compileSdkVersion 34
+
+    defaultConfig {
+        applicationId "com.ruyanameSonMobile"
+        minSdkVersion 24
+        targetSdkVersion 34
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            shrinkResources false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+        }
+    }
+
+    packagingOptions {
+        pickFirst "**/*.so"
+    }
+}
+
+dependencies {
+    implementation "com.facebook.react:react-android"
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
+    implementation "androidx.core:core-splashscreen:1.0.1"
+    implementation "com.android.support:multidex:1.0.3"
+
+    // ✅ Firebase (BOM ile)
+    implementation platform("com.google.firebase:firebase-bom:32.7.3")
+    implementation "com.google.firebase:firebase-analytics"
+    implementation "com.google.firebase:firebase-firestore"
+    implementation "com.google.firebase:firebase-storage"
+    implementation "com.google.firebase:firebase-auth"
+}
+
+apply plugin: 'com.google.gms.google-services'

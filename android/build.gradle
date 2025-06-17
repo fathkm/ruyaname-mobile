@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext {
+        buildToolsVersion = "35.0.0"
+        minSdkVersion = 24
+        compileSdkVersion = 35
+        targetSdkVersion = 35
+        kotlinVersion = "1.9.22"
+        ndkVersion = "26.3.11579264" // Eğer kullanıyorsan burada da belirtilebilir
+    }
+
+    repositories {
+        google()
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath("com.android.tools.build:gradle:8.2.1")
+        classpath("com.facebook.react:react-native-gradle-plugin:0.72.6")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion")
+
+        // ✅ Firebase Google Services için gerekli classpath
+        classpath("com.google.gms:google-services:4.4.1")
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url("$rootDir/node_modules/react-native/android") }
+        maven { url("https://www.jitpack.io") }
+        maven { url("https://maven.google.com") }
+    }
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}

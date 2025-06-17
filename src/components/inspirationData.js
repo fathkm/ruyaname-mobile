@@ -1,0 +1,3 @@
+const inspirationData = {"hikmetliSozler": ["“Rüyalar, kalbin aynasıdır.” – Hz. Yusuf", "“Görmek, gözle değil gönülle olur.” – Mevlânâ", "“Zaman, sabredenler için hayırlı sırlar taşır.”"], "hadisler": ["“Mümin, kendisi için istediğini kardeşi için de ister.” – Buhari", "“Zalimlere yardım etmeyin.” – Tirmizi", "“Allah, kulunun kalbine bakar.” – Müslim"], "ayetler": ["“Her zorlukla beraber bir kolaylık vardır.” (İnşirah 6)", "“Kalpler ancak Allah’ı anmakla huzur bulur.” (Ra’d 28)", "“O, sizi karanlıklardan aydınlığa çıkarandır.” (Hadid 9)"]};
+
+export default inspirationData;

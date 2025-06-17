@@ -1,0 +1,1 @@
+ndk.dir=C:\\Users\\Fatih Km\\AppData\\Local\\Android\\Sdk\\ndk\\26.3.11579264
